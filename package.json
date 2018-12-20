@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.4.3"
+  },
+  "scripts": {
+    "postinstall": "npm run build:all",
+    "build:all": "lerna run build",
+    "start": "npm run start:server",
+    "start:server": "cd ./packages/server && npm start"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

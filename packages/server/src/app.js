@@ -2,6 +2,8 @@ const express = require('express')
 const path = require('path')
 const app = express()
 
+console.log('this is the development branch... hi!')
+
 app.use(express.static(path.join(__dirname,'../../frontend/dist/')))
 
 app.get('/api/dummydata', (req, res) => {

@@ -2,7 +2,8 @@
   "name": "root",
   "private": true,
   "dependencies": {
-    "lerna": "^3.4.3"
+    "lerna": "^3.4.3",
+    "express": "^4.16.4"
   },
   "scripts": {
     "postinstall": "npm run build:all",

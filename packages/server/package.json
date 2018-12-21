@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./dist/app.js",
+    "start": "node ./src/app.js",
     "build": "(rm -r ./dist || true) && mkdir ./dist && cp ./src/app.js ./dist/app.js"
   },
   "author": "",

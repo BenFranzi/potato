@@ -9,7 +9,7 @@ JSON_TITLE = process.env.JSON_TITLE || 'no env var passed for JSON_TITLE'
 
 console.log(LOG_MESSAGE)
 
-app.use(express.static(path.join(__dirname,'../../frontend/dist/')))
+app.use(express.static(path.join(__dirname,'../../frontend/')))
 
 app.get('/api/dummydata', (req, res) => {
     res.json({

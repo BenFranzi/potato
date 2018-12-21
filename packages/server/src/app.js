@@ -2,7 +2,12 @@ const express = require('express')
 const path = require('path')
 const app = express()
 
-console.log('this is the development branch... hi!')
+
+LOG_MESSAGE = process.env.LOG_MESSAGE || 'no env var passed for LOG_MESSAGE'
+JSON_TITLE = process.env.JSON_TITLE || 'no env var passed for JSON_TITLE'
+
+
+console.log(LOG_MESSAGE)
 
 app.use(express.static(path.join(__dirname,'../../frontend/dist/')))
 
@@ -10,7 +15,7 @@ app.get('/api/dummydata', (req, res) => {
     res.json({
         userId: 1,
         id: 1,
-        title: "hello world",
+        title: JSON_TITLE,
         completed: false
     })
 })
